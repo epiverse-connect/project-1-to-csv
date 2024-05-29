@@ -2,8 +2,6 @@
 // https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/using-the-api-to-manage-projects
 // https://gist.github.com/richkuz/e8842fce354edbd4e12dcbfa9ca40ff6
 // ProjectV2 is really badly documented
-
-import 'dotenv/config'
 import { gql, request } from 'graphql-request'
 import fs from 'fs'
 import { Parser } from 'json2csv'
@@ -90,13 +88,13 @@ const fetchProjects = async () => {
   }
 };
 
-const fields = ['deliverable', 'category', 'title', 'url', 'status', 'startDate', 'endDate'];
+const fields = ['deliverable', 'phase', 'title', 'url', 'status', 'startDate', 'endDate'];
 fetchProjects().then(projects => {
   const opts = { fields };
 
   const data = projects.nodes.map(project => ({
     deliverable: project.deliverable ? project.deliverable.name : '',
-    category: project.category.name,
+    phase: project.category.name,
     title: project.content.title,
     url: project.content.url,
     status: project.status.name,
