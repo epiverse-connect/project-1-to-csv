@@ -7,6 +7,8 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.PROJECT_CSV_TOKEN }}
         permissions:
             contents: write
             issues: write
@@ -26,8 +28,6 @@ jobs:
 
         - name: Run script
           run: node index.js
-          env:
-            GITHUB_TOKEN: ${{ secrets.PROJECT_CSV_TOKEN }}
 
         - name: Commit and push if it changed
           run: |
