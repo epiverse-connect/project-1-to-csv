@@ -6,7 +6,7 @@ import { gql, request } from 'graphql-request'
 import fs from 'fs'
 import { Parser } from 'json2csv'
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+const GITHUB_TOKEN = process.env.PROJECT_CSV_TOKEN;
 const OWNER = 'epiverse-connect';
 
 const endpoint = 'https://api.github.com/graphql';
