@@ -8,11 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
+  "license": "CC0-1.0",
   "dependencies": {
-    "@octokit/graphql": "^8.1.1",
-    "@octokit/rest": "^20.1.1",
-    "dotenv": "^16.4.5",
     "graphql-request": "^7.0.1",
     "json2csv": "^6.0.0-alpha.2"
   }
