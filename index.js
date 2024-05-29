@@ -94,7 +94,7 @@ fetchProjects().then(projects => {
 
   const data = projects.nodes.map(project => ({
     deliverable: project.deliverable ? project.deliverable.name : '',
-    phase: project.category.name,
+    phase: project.category ? project.category.name : '',
     title: project.content.title,
     url: project.content.url,
     status: project.status.name,
