@@ -97,7 +97,7 @@ fetchProjects().then(projects => {
     phase: project.category ? project.category.name : '',
     title: project.content.title,
     url: project.content.url,
-    status: project.status.name ? project.status.name : '',
+    status: project.status ? project.status.name : '',
     startDate: project.start.date,
     endDate: project.end.date,
   }));
